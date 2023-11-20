@@ -6,14 +6,14 @@ The <i>**uk_food**</i> MongoDB database and the <i>**establishments**</i> collec
 <br>
 
 ## Part 2 - Update the Database ##
-We will use the Jupiter notebook <i>**NoSQL_setup_starter.ipynb**</i> to update the <i>establishments</i> collection.<br>
+We will use the Jupiter notebook [<i>**NoSQL_setup_starter.ipynb**</i>](https://github.com/xoffvsg/nosql-challenge/blob/main/NoSQL_setup_starter.ipynb) to update the <i>establishments</i> collection.<br>
 After inserting the document corresponding to the new "Penang Flavours" restaurant, we will update its _BusinessTypeID_ with the value "1" to reflect its <i>BusinessType</i> being under the  <i>Restaurant/Cafe/Canteen</i> category.<br>
 We will the delete the documents in the <i>establishments</i> collection corresponding to the businesses managed by the Dover authority.<br>
 We will the update the database to convert the latitudes and longitudes in all the documents from String to Float, and the ratings from String to Integer.<br>
 Note: Using __$toDecimal__ to convert a string to decimal creates a Decimal128 type, which does not allow direct arithmetic operations with floats as required in the second part of the challenge (distances from Lon and Lat). We will use __$toDouble__ instead to convert the strings to floats.<br>
 
 ## Part 3 - Exploratory Analysis ##
-We will use the Jupiter notebook <i>**NoSQL_analysis_starter.ipynb**</i> to explore the collection.<br>
+We will use the Jupiter notebook [<i>**NoSQL_analysis_starter.ipynb**</i>](https://github.com/xoffvsg/nosql-challenge/blob/main/NoSQL_analysis_starter.ipynb) to explore the collection.<br>
 We find that 41 establisments in the collection have a hygiene score equal to 20 (the higher the value, the worse the establishment is). The query result is converted to a Pandas dataframe.<br>
 We find that 33 establishments managed by the London authority in the collection have a rating greater than or equal to 4 (on a scale of 1-5 with the higher the value, the better the establishment is). The query result is converted to a Pandas dataframe.<br>
 There are 87 establishments with a rating value of 5 (the highest) within 0.01 degrees of the "Penang Flavours" restaurant (managed by the Greenwich authority). We sort them by the hygiene score from good to bad, and we randomly select the first 5 establishments with the best hygiene score. The query result is converted to a Pandas dataframe.<br>
