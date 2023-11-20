@@ -84,7 +84,7 @@ Lastly, we search how many establishments in each Local Authority area have a hy
   </tbody>
 </table>
 </div>
-Figure 1
+Table 1
 
 
 
