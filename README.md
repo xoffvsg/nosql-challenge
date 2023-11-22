@@ -16,9 +16,57 @@ Note: Using __$toDecimal__ to convert a string to decimal creates a Decimal128 t
 We will use the Jupiter notebook [<i>**NoSQL_analysis_starter.ipynb**</i>](https://github.com/xoffvsg/nosql-challenge/blob/main/NoSQL_analysis_starter.ipynb) to explore the collection.<br>
 We find that 41 establisments in the collection have a hygiene score equal to 20 (the higher the value, the worse the establishment is). The query result is converted to a Pandas dataframe.<br>
 We find that 33 establishments managed by the London authority in the collection have a rating greater than or equal to 4 (on a scale of 1-5 with the higher the value, the better the establishment is). The query result is converted to a Pandas dataframe.<br>
-There are 87 establishments with a rating value of 5 (the highest) within 0.01 degrees of the "Penang Flavours" restaurant (managed by the Greenwich authority). We sort them by the hygiene score from good to bad, and we randomly select the first 5 establishments with the best hygiene score. The query result is converted to a Pandas dataframe.<br>
+There are 87 establishments with a rating value of 5 (the highest) within 0.01 degrees of the "Penang Flavours" restaurant (managed by the Greenwich authority). We sort them by the hygiene score from good to bad, and we randomly select the first 5 establishments with the best hygiene score. The query result is converted to a Pandas dataframe (table 1).<br>
 <br>
-Lastly, we search how many establishments in each Local Authority area have a hygiene score of 0 (the best). We find that the district with the highest number of such establishments is Thanet (see table 1), but Sunderland, Reading, Kensington and Chelsea, Dorset, Broxbourne, and North Norfolk only have one establishment each with this rating located in their respective purview... Caveat emptor...
+
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>BusinessName</th>
+      <th>BusinessType</th>
+      <th>AddressLine1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Volunteer</td>
+      <td>Pub/bar/nightclub</td>
+      <td>130 - 132 Plumstead High Street</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Plumstead Manor Nursery</td>
+      <td>Caring Premises</td>
+      <td>Plumstead Manor School Old Mill Road</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Atlantic Fish Bar</td>
+      <td>Takeaway/sandwich shop</td>
+      <td>35 Lakedale Road</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Iceland</td>
+      <td>Retailers - supermarkets/hypermarkets</td>
+      <td>144 - 146 Plumstead High Street</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Howe and Co Fish and Chips - Van 17</td>
+      <td>Mobile caterer</td>
+      <td>Restaurant And Premises 107A Plumstead High St...</td>
+    </tr>
+  </tbody>
+</table>
+Table 1
+
+
+<br><br>
+Lastly, we search how many establishments in each Local Authority area have a hygiene score of 0 (the best). We find that the district with the highest number of such establishments is Thanet (see table 2), but Sunderland, Reading, Kensington and Chelsea, Dorset, Broxbourne, and North Norfolk only have one establishment each with this rating located in their respective purview... Caveat emptor...
 <br><br>
 
 
@@ -83,8 +131,7 @@ Lastly, we search how many establishments in each Local Authority area have a hy
     </tr>
   </tbody>
 </table>
-</div>
-Table 1
+Table 2
 
 
 
